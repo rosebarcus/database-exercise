@@ -1,26 +1,46 @@
 USE codeup_test_db;
 
+SELECT 'All of my albums' AS 'first TODO';
 
-SELECT AS 'FROM albums;
+SELECT * FROM albums;
 
-SELECT name WHERE release_date < 1980;
+SELECT 'All albums released before 1980' AS 'second TODO';
 
-SELECT ALBUMS WHERE artist = 'Michael Jackson';
+SELECT * FROM albums WHERE release_date < 1980;
 
+SELECT 'ALL albums by Michael Jackson' AS 'third TODO';
+
+SELECT * FROM albums WHERE artist = 'Michael Jackson';
+
+SELECT 'Sales BEFORE' AS 'fourth TODO';
+SELECT sales FROM albums;
 
 UPDATE albums
-SET sales = (sales * 10);
+SET sales = sales * 10;
 
-UPDATE albums SET release_date = (release_date - 100)
-WHERE release_date < 1980;
+SELECT 'Sales AFTER' AS 'fifth TODO';
+SELECT sales FROM albums;*/
 
-SELECT albums WHERE release_date < 1980;
 
-Update albums
-Set artist = 'Michael Jackson', artist = "Peter Jackson";
+SELECT 'Subtracting 100 years from albums release before 1980' AS '8th TODO';
+UPDATE albums
+SET release_date = release_date - 100
+WHERE release_date <= 1980;
+
+UPDATE albums
+SET artist = 'Peter Jackson'
 WHERE artist = 'Michael Jackson';
 
-SELECT albums WHERE artist = 'Peter Jackson';
+SELECT 'Changing Michael Jackson to Peter Jackson' AS '7th TODO';
+SELECT artist FROM albums WHERE artist = 'Peter Jackson';
+
+
+
+
+
+
+
+
 
 
 
