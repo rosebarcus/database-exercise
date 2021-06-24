@@ -43,6 +43,18 @@ FROM users
          JOIN roles
               ON users.role_id = roles.id;
 
+USE codeup_test_db;
+SHOW TABLES;
+
+CREATE TABLE persons (
+    person_id INTO NOT NULL AUTO_INCREMENT,
+    first_name VARCHAR (25) NOT NULL,
+    album_id INT NOT NULL,
+    PRIMARY KEY (person_id)
+);
+
+INSERT INTO  persons (first_name, album_id) VALUES ('Olivia', 29)
+
 # LEFT join
 SELECT users.name AS user_name, roles.name AS role_name
 FROM users
