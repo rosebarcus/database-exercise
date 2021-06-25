@@ -58,7 +58,7 @@ SELECT users.name AS user_name, roles.name AS role_name
 FROM users
          RIGHT JOIN roles ON users.role_id = roles.id;
 
-
+USE employees;
 #show all current managers, modified to include all current managers that are female:
 SELECT d.dept_name AS 'Department Name', CONCAT(e.first_name, ' ', e.last_name) AS 'DEPARTMENT MANAGER'
 FROM employees AS e
@@ -70,7 +70,7 @@ WHERE dm.to_date > now()
 AND e.gender = 'F'
 LIMIT 10;
 
-SELECT t.title As Title, COUNT(t.tile)
+SELECT t.title As Title, COUNT(t.title)
 FROM employees AS e
 JOIN titles AS t
     ON e.emp_no = t.emp_no
