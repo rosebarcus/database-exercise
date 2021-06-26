@@ -93,6 +93,20 @@ JOIN departments as d
 WHERE d.dept_name = 'Customer Service'
 GROUP BY t.title;
 
+SELECT d.dept_name AS 'Department Name',
+       CONCAT(e.first_name, ' ', e.last_name) AS 'Name',
+       s.salary AS 'Salary'
+FROM employees AS e
+         JOIN dept_manager AS dm
+              ON e.emp_no = dm.emp_no
+         JOIN salaries AS s
+              ON dm.emp_no = s.emp_no
+         JOIN departments AS d
+              ON d.dept_no = dm.dept_no
+WHERE dm.to_date > NOW()
+  AND s.to_date > NOW()
+ORDER BY d.dept_name ;
+
 
 
 
