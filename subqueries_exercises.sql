@@ -46,7 +46,7 @@ FROM employees
 WHERE emp_no = (
     SELECT emp_no
     FROM salaries
-    WHERE salary = (SELECT MAX(salary)
+    WHERE to_date LIKE '9999%' AND salary = (SELECT MAX(salary)
         FROM salaries
         )
     );
