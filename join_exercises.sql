@@ -53,7 +53,7 @@ CREATE TABLE persons (
     PRIMARY KEY (person_id)
 );
 
-INSERT INTO  persons (first_name, album_id) VALUES ('Olivia', 29)
+INSERT INTO  persons (first_name, album_id) VALUES ('Rose', 29);
 
 # LEFT join
 SELECT users.name AS user_name, roles.name AS role_name
